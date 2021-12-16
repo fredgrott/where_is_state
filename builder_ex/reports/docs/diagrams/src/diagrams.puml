@@ -1,0 +1,25 @@
+@startuml
+set namespaceSeparator ::
+
+class "file:::::::D:::fredgrttsstuff::GithubProjects::where_is_state::builder_ex::bin::builder_ex.dart::PizzaBuilder" {
+  +String crust
+  +int diameter
+  -Set<String> _toppings
+  +Set<String> toppings
+  -void _ensureCheese()
+  +Pizza build()
+}
+
+class "file:::::::D:::fredgrttsstuff::GithubProjects::where_is_state::builder_ex::bin::builder_ex.dart::Pizza" {
+  -String _crust
+  -int _diameter
+  -Set<String> _toppings
+  +String crust
+  +int diameter
+  +String toppings
+  -String _stringifiedToppings()
+  +String toString()
+}
+
+
+@enduml

@@ -1,0 +1,26 @@
+@startuml
+set namespaceSeparator ::
+
+class "counter_app::main.dart::MyApp" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "counter_app::main.dart::MyApp"
+
+class "counter_app::main.dart::MyHomePage" {
+  +String title
+  +State<MyHomePage> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "counter_app::main.dart::MyHomePage"
+
+class "counter_app::main.dart::_MyHomePageState" {
+  -int _counter
+  -void _incrementCounter()
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "counter_app::main.dart::_MyHomePageState"
+
+
+@enduml
